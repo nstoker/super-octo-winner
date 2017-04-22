@@ -4,11 +4,10 @@
 #include <stdlib.h>
 
 #include "Table.h"
-#include "sqlite3.h"
 
 using namespace std;
 
-static int callback(void *data, int argc, char **argv, char **azColName) {
+ int callback(void *data, int argc, char **argv, char **azColName) {
     int i;
     fprintf(stderr, "%s: ", (const char*)data);
 

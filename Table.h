@@ -1,7 +1,7 @@
-#include "sqlite3.h"
+#include <sqlite3.h>
 using namespace std;
 void executeSqlStatement(sqlite3 *db);
-static int callback(void *data, int argc, char **argv, char **azColName);
+int callback(void *data, int argc, char **argv, char **azColName);
 class Table
 {
 public:

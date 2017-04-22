@@ -33,3 +33,5 @@
 .release_time
 bin/
 build/
+test.db
+hello
