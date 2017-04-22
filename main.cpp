@@ -2,16 +2,16 @@
 #include "Table.h"
 using namespace std;
 
-int openDatabase(sqlite3 *db);
+
 
 int main() {
     sqlite3 *db;
+    sqlite3_open_v2("test.db", &db, SQLITE_OPEN_READWRITE | SQLITE_OPEN_CREATE, NULL);
     string columnValues, rowValues;   // these are for query
     Table Personal;
     Personal.SettableName("PERSONAL");
     columnValues = "NUME TEXT, ID TEXT";   // this is just an example
 
-    openDatabase(db);
 
     Personal.createTable(db, columnValues);
     sqlite3_close(db);
