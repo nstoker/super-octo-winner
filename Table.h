@@ -1,3 +1,6 @@
+#ifndef __TABLE_H
+#define __TABLE_H
+
 #include <sqlite3.h>
 using namespace std;
 void executeSqlStatement(sqlite3 *db);
@@ -10,3 +13,4 @@ public:
     string tableName;
     string sqlCommand;
 };
+#end
